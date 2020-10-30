@@ -1,5 +1,13 @@
 package ru.netologi.domain.constructor;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Radio {
     private int radioStation;
     private int volume;
@@ -15,9 +23,6 @@ public class Radio {
 
     public Radio(int volume) {
         this.volume = volume;
-    }
-
-    public Radio() {
     }
 
     public void nextRadioStation(int radioStation) {
@@ -55,58 +60,11 @@ public class Radio {
         }
         this.volume = volume + 1;
     }
+
     public void downVolume(int volume) {
         if (volume <= minVolume) {
             return;
         }
         this.volume = volume - 1;
-    }
-
-    public int getRadioStation() {
-        return radioStation;
-    }
-
-    public void setRadioStation(int radioStation) {
-        this.radioStation = radioStation;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public int getMaxStation() {
-        return maxStation;
-    }
-
-    public void setMaxStation(int maxStation) {
-        this.maxStation = maxStation;
-    }
-
-    public int getMinStation() {
-        return minStation;
-    }
-
-    public void setMinStation(int minStation) {
-        this.minStation = minStation;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public void setMaxVolume(int maxVolume) {
-        this.maxVolume = maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    public void setMinVolume(int minVolume) {
-        this.minVolume = minVolume;
     }
 }
